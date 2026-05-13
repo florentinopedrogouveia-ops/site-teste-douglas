@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOUGLAS COSTA | Corretor de Imóveis - AL - Premium</title>
+    <meta name="description" content="Especialista em compra, venda e aluguel de imóveis de alto padrão em Alagoas. Atendimento personalizado e segurança jurídica.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animations CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0A192F',
+                        accent: '#C5A059',
+                        'accent-dark': '#B8860B',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-accent flex items-center justify-center rounded-sm rotate-45 border border-white/20">
+                    <span class="-rotate-45 font-serif font-bold text-white text-xl">DC</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-serif font-bold text-lg leading-tight text-white uppercase tracking-wider">Douglas Costa</span>
+                    <span class="text-[9px] tracking-[0.3em] text-accent font-bold uppercase">Corretor de Imóveis - AL</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="text-xs font-bold text-white/90 hover:text-accent transition-colors uppercase tracking-widest">Início</a>
+                <a href="#imoveis" class="text-xs font-bold text-white/90 hover:text-accent transition-colors uppercase tracking-widest">Imóveis</a>
+                <a href="#sobre" class="text-xs font-bold text-white/90 hover:text-accent transition-colors uppercase tracking-widest">Sobre</a>
+                <a href="#contato" class="text-xs font-bold text-white/90 hover:text-accent transition-colors uppercase tracking-widest">Contato</a>
+                <a href="https://wa.me/5582999350221" class="px-6 py-2.5 bg-accent hover:bg-accent-dark text-white rounded-full text-[11px] font-bold transition-all uppercase tracking-widest">WhatsApp</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="fixed inset-0 bg-primary z-[60] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500">
+        <button id="close-menu-btn" class="absolute top-8 right-8 text-white">
+            <i data-lucide="x" size="32"></i>
+        </button>
+        <a href="#inicio" class="text-2xl font-serif text-white hover:text-accent">Início</a>
+        <a href="#imoveis" class="text-2xl font-serif text-white hover:text-accent">Imóveis</a>
+        <a href="#sobre" class="text-2xl font-serif text-white hover:text-accent">Sobre</a>
+        <a href="#contato" class="text-2xl font-serif text-white hover:text-accent">Contato</a>
+        <a href="https://wa.me/5582999350221" class="px-10 py-4 bg-accent text-white rounded-full font-bold">WhatsApp</a>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1920&q=80')"></div>
+            <div class="absolute inset-0 bg-primary/40 backdrop-brightness-75"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-transparent to-primary/80"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span class="inline-block text-accent font-bold tracking-[0.4em] uppercase text-[10px] mb-4">Exclusividade em Alagoas</span>
+                <h1 class="text-5xl md:text-8xl font-serif font-bold text-white mb-6 leading-tight">
+                    Encontre o imóvel <br> 
+                    <span class="text-accent italic font-normal">dos seus sonhos</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/80 mb-10 max-w-2xl leading-relaxed">
+                    Especialista em compra, venda e aluguel de imóveis com atendimento personalizado e total segurança jurídica no paraíso das águas.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/5582999350221" class="px-12 py-5 bg-accent hover:bg-accent-dark text-white rounded-full font-bold flex items-center justify-center gap-2 transition-all shadow-xl shadow-accent/20">
+                        Falar no WhatsApp <i data-lucide="arrow-right" size="20"></i>
+                    </a>
+                    <a href="#imoveis" class="px-12 py-5 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white rounded-full font-bold transition-all">
+                        Ver Imóveis
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROPERTIES -->
+    <section id="imoveis" class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-accent font-bold tracking-widest uppercase text-xs mb-4 inline-block">Portfólio Selecionado</span>
+                <h2 class="text-4xl md:text-6xl font-serif font-bold text-primary mb-6">Imóveis em Destaque</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Card 1 -->
+                <div class="property-card group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-80 overflow-hidden rounded-2xl mb-6 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Imóvel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] px-4 py-1.5 rounded-full uppercase font-bold">Beira Mar</div>
+                        <div class="absolute bottom-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold text-xl">R$ 4.500.000</div>
+                    </div>
+                    <div class="px-2">
+                        <div class="flex items-center gap-1 text-slate-400 text-xs mb-2 uppercase tracking-widest">
+                            <i data-lucide="map-pin" size="14" class="text-accent"></i> Barra de São Miguel, AL
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-4">Reserva das Águas Beach House</h3>
+                        <div class="flex items-center gap-6 border-t border-slate-100 pt-5">
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="bed-double" size="18" class="text-accent"></i> <span class="text-sm font-bold">5 Quartos</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="maximize" size="18" class="text-accent"></i> <span class="text-sm font-bold">450m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="property-card group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-80 overflow-hidden rounded-2xl mb-6 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1512918766671-56001ef8e693?auto=format&fit=crop&w=800&q=80" alt="Imóvel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] px-4 py-1.5 rounded-full uppercase font-bold">Apartamento</div>
+                        <div class="absolute bottom-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold text-xl">R$ 2.800.000</div>
+                    </div>
+                    <div class="px-2">
+                        <div class="flex items-center gap-1 text-slate-400 text-xs mb-2 uppercase tracking-widest">
+                            <i data-lucide="map-pin" size="14" class="text-accent"></i> Ponta Verde, Maceió
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-4">Infinity Blue Penthouse</h3>
+                        <div class="flex items-center gap-6 border-t border-slate-100 pt-5">
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="bed-double" size="18" class="text-accent"></i> <span class="text-sm font-bold">4 Quartos</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="maximize" size="18" class="text-accent"></i> <span class="text-sm font-bold">280m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="property-card group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-80 overflow-hidden rounded-2xl mb-6 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Imóvel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] px-4 py-1.5 rounded-full uppercase font-bold">Mansão</div>
+                        <div class="absolute bottom-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold text-xl">R$ 6.200.000</div>
+                    </div>
+                    <div class="px-2">
+                        <div class="flex items-center gap-1 text-slate-400 text-xs mb-2 uppercase tracking-widest">
+                            <i data-lucide="map-pin" size="14" class="text-accent"></i> Ipioca, Maceió
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-4">Mansão dos Corais</h3>
+                        <div class="flex items-center gap-6 border-t border-slate-100 pt-5">
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="bed-double" size="18" class="text-accent"></i> <span class="text-sm font-bold">6 Quartos</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="maximize" size="18" class="text-accent"></i> <span class="text-sm font-bold">720m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="property-card group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-80 overflow-hidden rounded-2xl mb-6 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Imóvel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] px-4 py-1.5 rounded-full uppercase font-bold">Casa</div>
+                        <div class="absolute bottom-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold text-xl">R$ 1.950.000</div>
+                    </div>
+                    <div class="px-2">
+                        <div class="flex items-center gap-1 text-slate-400 text-xs mb-2 uppercase tracking-widest">
+                            <i data-lucide="map-pin" size="14" class="text-accent"></i> Barra de São Miguel
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-4">Vila Premium Barra</h3>
+                        <div class="flex items-center gap-6 border-t border-slate-100 pt-5">
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="bed-double" size="18" class="text-accent"></i> <span class="text-sm font-bold">3 Quartos</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="maximize" size="18" class="text-accent"></i> <span class="text-sm font-bold">220m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="property-card group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-80 overflow-hidden rounded-2xl mb-6 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1600607687940-467f4b60274e?auto=format&fit=crop&w=800&q=80" alt="Imóvel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] px-4 py-1.5 rounded-full uppercase font-bold">Studio</div>
+                        <div class="absolute bottom-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold text-xl">R$ 850.000</div>
+                    </div>
+                    <div class="px-2">
+                        <div class="flex items-center gap-1 text-slate-400 text-xs mb-2 uppercase tracking-widest">
+                            <i data-lucide="map-pin" size="14" class="text-accent"></i> Jatiúca, Maceió
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-4">Loft Concept Mar</h3>
+                        <div class="flex items-center gap-6 border-t border-slate-100 pt-5">
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="bed-double" size="18" class="text-accent"></i> <span class="text-sm font-bold">1 Quarto</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="maximize" size="18" class="text-accent"></i> <span class="text-sm font-bold">65m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="property-card group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-80 overflow-hidden rounded-2xl mb-6 shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0bb2a6c3e?auto=format&fit=crop&w=800&q=80" alt="Imóvel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-primary/90 text-white text-[10px] px-4 py-1.5 rounded-full uppercase font-bold">Casa</div>
+                        <div class="absolute bottom-4 right-4 bg-accent text-white px-5 py-2 rounded-xl font-bold text-xl">R$ 3.400.000</div>
+                    </div>
+                    <div class="px-2">
+                        <div class="flex items-center gap-1 text-slate-400 text-xs mb-2 uppercase tracking-widest">
+                            <i data-lucide="map-pin" size="14" class="text-accent"></i> Antares, Maceió
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold text-primary mb-4">Casa do Alto</h3>
+                        <div class="flex items-center gap-6 border-t border-slate-100 pt-5">
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="bed-double" size="18" class="text-accent"></i> <span class="text-sm font-bold">4 Quartos</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-600">
+                                <i data-lucide="maximize" size="18" class="text-accent"></i> <span class="text-sm font-bold">380m²</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section id="diferenciais" class="py-32 bg-primary text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <span class="text-accent font-bold tracking-widest uppercase text-xs mb-4 inline-block">Diferenciais</span>
+                <h2 class="text-4xl md:text-6xl font-serif font-bold mb-6">Por que nos escolher?</h2>
+                <div class="w-24 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                <div class="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6 p-4 bg-white/5 rounded-xl inline-block group-hover:scale-110 transition-transform">
+                        <i data-lucide="check-circle-2" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Atendimento Personalizado</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Estratégias específicas para cada necessidade.</p>
+                </div>
+                <div class="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6 p-4 bg-white/5 rounded-xl inline-block group-hover:scale-110 transition-transform">
+                        <i data-lucide="map" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Especialista na Região</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Conhecimento profundo de Alagoas.</p>
+                </div>
+                <div class="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6 p-4 bg-white/5 rounded-xl inline-block group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Segurança Jurídica</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Assessoria completa e segura.</p>
+                </div>
+                <div class="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-6 p-4 bg-white/5 rounded-xl inline-block group-hover:scale-110 transition-transform">
+                        <i data-lucide="zap" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Atendimento Rápido</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">Resposta imediata via WhatsApp.</p>
+                </div>
+                <div class="p-8 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 transition-all group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-6 p-4 bg-white/5 rounded-xl inline-block group-hover:scale-110 transition-transform">
+                        <i data-lucide="star" class="text-accent w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4">Imóveis Selecionados</h3>
+                    <p class="text-white/60 text-sm leading-relaxed">A melhor curadoria do estado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre" class="py-32 bg-slate-50 overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="lg:w-1/2 relative" data-aos="fade-right">
+                    <div class="relative z-10 rounded-3xl overflow-hidden border-[12px] border-white shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80" alt="Douglas Costa" class="w-full h-[650px] object-cover">
+                    </div>
+                </div>
+
+                <div class="lg:w-1/2" data-aos="fade-left">
+                    <span class="text-accent font-bold tracking-[0.3em] uppercase text-xs mb-6 inline-block">Sobre o Corretor</span>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold text-primary mb-8 leading-tight">Douglas Costa</h2>
+                    <p class="text-xl text-slate-600 leading-relaxed mb-8">
+                        Com experiência no mercado imobiliário de Alagoas desde 2017, Douglas Costa oferece atendimento personalizado, transparência e as melhores oportunidades.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-accent">
+                                <i data-lucide="award" size="28"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">CRECI/AL 3200</h4>
+                                <p class="text-xs text-slate-400 uppercase tracking-widest">Profissional Registrado</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-white rounded-2xl shadow-lg flex items-center justify-center text-accent">
+                                <i data-lucide="shield-check" size="28"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primary">CEFISP 2017</h4>
+                                <p class="text-xs text-slate-400 uppercase tracking-widest">CRECI 22ª Região</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/5582999350221" class="inline-flex items-center gap-3 px-10 py-5 bg-primary text-white rounded-full font-bold hover:bg-slate-800 transition-all shadow-xl">
+                        Falar com Douglas <i data-lucide="message-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCALIZAÇÃO -->
+    <section class="py-32 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <div class="lg:w-1/3" data-aos="fade-right">
+                    <h2 class="text-4xl font-serif font-bold text-primary mb-8">Nossa Localização</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-slate-100 p-3 rounded-lg text-accent">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <p class="text-slate-500 text-sm">Rod. Dr. Ib Gatto Marinho Falcão, Sala 01 - Posto Elite, Barra de São Miguel - AL, 57180-000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 h-[450px] rounded-3xl overflow-hidden shadow-2xl relative border-8 border-white" data-aos="zoom-in">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15714.43763781033!2d-35.9080275!3d-9.8409395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7009407338423f7%3A0xe6775d7e5d8a9e9a!2sBarra%20de%20S%C3%A3o%20Miguel%2C%20AL!5e0!3m2!1spt-BR!2sbr!4v1620000000000!5m2!1spt-BR!2sbr" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="grayscale hover:grayscale-0 transition-all duration-700"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contato" class="bg-primary text-white py-24 text-center">
+        <div class="container mx-auto px-6">
+            <div class="w-16 h-16 bg-accent flex items-center justify-center rounded-sm rotate-45 border border-white/20 mx-auto mb-8">
+                <span class="-rotate-45 font-serif font-bold text-white text-3xl">DC</span>
+            </div>
+            <h2 class="text-4xl md:text-6xl font-serif font-bold mb-8">DOUGLAS COSTA</h2>
+            <p class="text-white/60 mb-12 max-w-xl mx-auto italic">"Sua chave para o paraíso em Alagoas."</p>
+            <div class="flex flex-col items-center gap-6 mb-16">
+                <div class="flex items-center gap-3 text-2xl font-bold text-accent">
+                    <i data-lucide="phone"></i> (82) 99935-0221
+                </div>
+            </div>
+            <div class="pt-12 border-t border-white/10 text-[10px] uppercase tracking-[0.4em] text-white/30">
+                &copy; 2024 DOUGLAS COSTA | CRECI/AL 3200
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/5582999350221" target="_blank" class="fixed bottom-8 right-8 z-[100] bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform">
+        <i data-lucide="message-circle" size="32"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
